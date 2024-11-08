@@ -216,9 +216,13 @@ class Pokedex {
     async searchPokemon(name) {
         const queryPokemon = name.toLowerCase();
 
-        const searchResult = document.getElementById("searchResult");
-        searchResult.style.display = "flex";
-        searchResult.querySelector("strong").textContent = name;
+        if (queryPokemon === "") {
+            return;
+        } else {
+            const searchResult = document.getElementById("searchResult");
+            searchResult.style.display = "flex";
+            searchResult.querySelector("strong").textContent = name;
+        };
 
         const allPokemon = await this.api.getAllPokemonName();
         const searchedPokemon = allPokemon.filter(pokemon => pokemon.includes(queryPokemon));
@@ -275,10 +279,6 @@ function main() {
     });
 
     document.querySelector(".input-box .close-button").addEventListener("click", () => {
-        document.querySelector("#searchForm .input-box").classList.remove("active");
-    });
-
-    window.addEventListener("resize", () => {
         document.querySelector("#searchForm .input-box").classList.remove("active");
     });
 };
