@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeAPI</title>
+
+    <!-- MAIN CSS FILE -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="pokedex">
+        <nav class="navbar">
+            <a href="#" class="navbar-logo">Pokedex</a>
+            <form id="searchForm">
+                <button id="searchIcon" type="button">
+                    <img src="src/icon/search.svg" alt="" class="icon">
+                </button>
+
+                <div class="input-box">
+                    <input type="search" id="searchInput" placeholder="Search Pokemon Here" autocomplete="off">
+                    <button class="close-button" type="button">&#10005;</button>
+                </div>
+            </form>
+        </nav>
+
+        <div id="searchResult">
+            Search Result From :
+            <strong></strong>
+        </div>
+
+
+        <div class="container">
+            <template>
+                <div class="card">
+                    <button class="btn-details">
+                        <img src="src/icon/box-arrow-up-right.svg" class="btn-icon">
+                    </button>
+
+                    <div class="card-image">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/1.png"
+                            alt="">
+                    </div>
+                    <div class="card-caption">
+                        <h2>Bulbasaur</h2>
+                        <div class="type">
+                            <span>Grass</span>
+                            <span>Poison</span>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </div>
+
+        <div class="load-button-container">
+            <button id="btnLoadMore" disabled>Load More Pokemon</button>
+        </div>
+
+    </section>
+
+    <div id="pokemonDetails">
+
+        <div class="container-details">
+            <button id="closeButton">&#10005;</button>
+
+            <div class="pokemon-details">
+
+                <div class="pokemon-image">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/1.png"
+                        alt="">
+                </div>
+
+                <div class="pokemon-information">
+
+                    <div class="pokemon-identity">
+                        <h2>Pokemon Name</h2>
+                        <div class="type">
+                            <span>Type 1</span>
+                            <span>Type 2</span>
+                        </div>
+                    </div>
+
+                    <div class="pokemon-physique">
+                        <div class="pokemon-weight">
+                            <h3>0 kg</h3>
+                            <small>Weight</small>
+                        </div>
+
+                        <div class="pokemon-height">
+                            <h3>0 cm</h3>
+                            <small>Height</small>
+                        </div>
+                    </div>
+
+                    <div class="pokemon-base-stats">
+
+                        <h4>Base Statistics :</h4>
+
+                        <div class="pokemon-stats-range">
+                            <div class="stats-box">
+                                <small>HP</small>
+                                <input type="range" min="1" max="255" value="20" disabled class="range">
+                            </div>
+                            <div class="stats-box">
+                                <small>Attack</small>
+                                <input type="range" min="1" max="255" value="20" disabled class="range">
+                            </div>
+                            <div class="stats-box">
+                                <small>Defense</small>
+                                <input type="range" min="1" max="255" value="20" disabled class="range">
+                            </div>
+                            <div class="stats-box">
+                                <small>Special Attack</small>
+                                <input type="range" min="1" max="255" value="20" disabled class="range">
+                            </div>
+                            <div class="stats-box">
+                                <small>Special Defense</small>
+                                <input type="range" min="1" max="255" value="20" disabled class="range">
+                            </div>
+                            <div class="stats-box">
+                                <small>Speed</small>
+                                <input type="range" min="1" max="255" value="20" disabled class="range">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
